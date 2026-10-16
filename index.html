@@ -313,7 +313,6 @@ body.cine-on #pauseBtn,body.cine-on #boostBtn,body.cine-on #skillBtn{opacity:0;p
         <div class="srow"><b data-i="setCine"></b><button class="sw" id="t-cine" role="switch" aria-checked="true"></button></div>
         <div class="srow" id="r-nar"><b data-i="setNar"></b><button class="sw" id="t-nar" role="switch" aria-checked="true"></button></div>
         <div class="srow" id="r-nar2"><span id="narStat" style="font-size:13px;opacity:.75;line-height:1.35"></span><button class="btn small" id="b-nartest" data-i="narTest"></button></div>
-        <div class="srow" id="r-nar3"><b data-i="narPick"></b><select id="s-narv" class="sel" aria-label="Voice"></select></div>
         <div class="row3" style="grid-template-columns:1fr 1fr"><button class="btn small" id="b-wopen" data-i="setOpen"></button><button class="btn small" id="b-wend" data-i="setEnd"></button></div>
         <div class="srow"><b data-i="language"></b><div class="seg" id="seg-lang"><button data-lang="en" dir="ltr">English</button><button data-lang="ar" dir="rtl">العربية</button></div></div>
         <button class="btn danger" id="b-reset"></button>
@@ -7039,7 +7038,7 @@ splashTag:'Reach the Gate. Relight the star.',tapStart:'Tap to start',codex:'Arc
 prologue:['The star Solenne is dying. Its light, the last warmth of the Cradle, is fading.','Long ago a gate was built to relight it: the Meridian Gate.','But the Choir, an ancient defense network, still guards it. Its machines forgot what they protect.','You are Runner Zero. You carry the Ember Seed. Reach the Gate. Light it.'],
 cnOpen:["Solenne. The last star of the Cradle.","Its light is failing. When it dies, so does everything we built.","Others tried to reach the Meridian Gate before you.","None came back.","The Gate can relight the star.","But the Choir still guards it. Its machines forgot what they protect.","You are Runner Zero.","You carry the Ember Seed. One spark. One chance.","Runner Zero, launch is clear. Fly forward. Don't look back."],
 cnEnd:["It was never an enemy.","It was a test.","Every Runner before you, waiting to see if someone would make it.","They did not fail. They carried you here.","Runner Zero... light the Gate.","Now.","Solenne shines again.","The Cradle will remember every Runner.","THE END"],
-cnSkip:'Skip ▸▸',cnGo:'GO!',cnFinal:'FINAL CONTACT',setCine:'Story cinematics',setNar:'Narrator voice',narTest:'Test voice',narPick:'Voice',narAuto:'Auto (best voice)',narPack:'Recorded narration.',narNo:'This browser has no speech voice.',narNoV:'No voice for this language on this device.',narWait:'Voices are still loading...',narVoice:'Voice: {v}',narBlocked:'Voice blocked ({e}).',setOpen:'Watch the opening',setEnd:'Watch the ending',
+cnSkip:'Skip ▸▸',cnGo:'GO!',cnFinal:'FINAL CONTACT',setCine:'Story cinematics',setNar:'Narrator voice',narTest:'Test voice',narNoMale:'No male voice on this device, using {v}. Install a male one such as Daniel (iPhone: Settings, Accessibility, Spoken Content, Voices).',narPack:'Recorded narration.',narNo:'This browser has no speech voice.',narNoV:'No voice for this language on this device.',narWait:'Voices are still loading...',narVoice:'Voice: {v}',narBlocked:'Voice blocked ({e}).',setOpen:'Watch the opening',setEnd:'Watch the ending',
 l1short:["Launch confirmed, Runner Zero. Hostiles ahead. Weapons are free.","Stay alive. The Cradle is counting on you."],
 hyLight:'Solenne light {n}%',hyDown:'TARGET DESTROYED',hyClose:'CLOSE!',hyLast:'FINISH IT!',hyPerfect:'PERFECT',hyCombo:'COMBO x{n}',hyPU:{shield_cyan:'SHIELD',shield_magenta:'THORN SHIELD',shield_gold:'INVINCIBLE',shield_green:'REPAIR SHIELD',multi:'MULTI-SHOT',rapid:'RAPID FIRE',speed:'SPEED UP',heal:'REPAIR'},tactics:["Its plates slam shut along the red line. Dodge sideways, then hit the core.", "It drills straight down once the line locks. Leave the lane early.", "Its sails sweep wide. Hold the center and snipe the core.", "Flames fall in rows with a gap. Slide into the green lane.", "Its star arms spin. Fire between the spokes.", "It surges in waves. Cross through the troughs, never the crests.", "It blinks. Watch the ring where it will land, and hit it first.", "The tower beams lock on. Keep moving, never in a straight line.", "It learns your habits. Change your path every few seconds.", "Its debris orbit tightens. Break the ring from outside.", "Long armored hull. Circle wide and hit the glowing segments.", "Flame walls close in. Find the gap and stay calm.", "Blades fan out. Slip between them, then punish.", "Lightning comes on a beat. Count the pulses and move between them.", "Slow but huge. Stay below its guns and hit the core.", "Its threads pull you inward. Strafe, do not fight the pull.", "Blazing rings. Use the dark gaps, the light burns.", "Its light flickers and attacks follow the dark. Watch the flicker.", "Its cells fire in sequence. Learn the order and go around.", "Everything you have learned, all at once. End it, Runner."],l1comm:["Runner Zero, can you hear me? This is Solenne Control.", "The star is dying. We have minutes of light left, not years.", "You carry the Ember Seed. It is our last chance to relight her.", "The Choir's machines have woken. Everything between you and the Gate wants you gone.", "Fly forward. Don't stop. Don't look back. The Cradle is counting on you."],ph2c:["Its armor is breaking! Keep the pressure on!", "It's changing pattern. Stay sharp, Runner!", "Good hit! Something inside it is cracking!"],ph3c:["It's going all in! Find the gap and hold it!", "Final stage! Don't flinch, Runner!", "Everything it has is on you now. Move!"],laneOff:"Sensors are overloaded, runner. Safe-lane guides are offline from here. Read the patterns yourself.",ctlName:"SOLENNE CONTROL",tacName:"TACTICAL",contact:"CONTACT",
 bossNames:['Rust Clamp','Gravel Drill','Iron Sail','Cinder Crown','Hollow Star','Tidebreaker','Nova Prism','Spire Warden','Obsidian Lens','Plague Orbit','Chrome Dreadnought','Ember Sovereign','Glass Reaper','Storm Anvil','Pale Fortress','Void Loom','Solar Tyrant','Black Lantern','Hex Monarch','The Final Singularity']
@@ -7116,7 +7115,7 @@ splashTag:'اصل إلى البوابة. أعد إشعال النجم.',tapStart
 prologue:['النجم سولين يحتضر، وضوؤه، آخر دفء في المهد، يخبو.','قبل زمن بعيد بُنيت بوابة لإعادة إشعاله: بوابة الأوج.','لكن الجوقة، شبكة دفاع قديمة، ما زالت تحرسها، وآلاتها نسيت ما تحرسه.','أنت العدّاء صفر، تحمل بذرة الجمر. ابلغ البوابة وأشعلها.'],
 cnOpen:["سولين، آخر نجوم المهد.","ضوؤه يخبو، وحين ينطفئ ينطفئ معه كل ما بنيناه.","حاول كثيرون قبلك بلوغ بوابة الأوج.","لم يعد أحد.","البوابة وحدها قادرة على إعادة إشعال النجم.","لكن الجوقة ما زالت تحرسها، وآلاتها نسيت ما تحمي.","أنت العدّاء صفر.","تحمل بذرة الجمر. شرارة واحدة، وفرصة واحدة.","أيها العدّاء صفر، الإقلاع مسموح. انطلق للأمام ولا تنظر خلفك."],
 cnEnd:["لم يكن عدواً قط.","كان اختباراً.","كل عدّاء سبقك، ينتظر ليرى إن كان أحدٌ سيصل.","لم يفشلوا. لقد حملوك إلى هنا.","أيها العدّاء صفر... أشعل البوابة.","الآن.","سولين تشرق من جديد.","سيذكر المهد كل عدّاء.","النهاية"],
-cnSkip:'تخطي ◂◂',cnGo:'انطلق!',cnFinal:'الرصد الأخير',setCine:'المشاهد السينمائية',setNar:'صوت الراوي',narTest:'جرّب الصوت',narPick:'الصوت',narAuto:'تلقائي (الأفضل)',narPack:'تعليق صوتي مسجّل.',narNo:'هذا المتصفح لا يدعم الصوت المنطوق.',narNoV:'لا يوجد صوت لهذه اللغة على هذا الجهاز.',narWait:'جارٍ تحميل الأصوات...',narVoice:'الصوت: {v}',narBlocked:'الصوت محظور ({e}).',setOpen:'شاهد الافتتاحية',setEnd:'شاهد الخاتمة',
+cnSkip:'تخطي ◂◂',cnGo:'انطلق!',cnFinal:'الرصد الأخير',setCine:'المشاهد السينمائية',setNar:'صوت الراوي',narTest:'جرّب الصوت',narNoMale:'',narPack:'تعليق صوتي مسجّل.',narNo:'هذا المتصفح لا يدعم الصوت المنطوق.',narNoV:'لا يوجد صوت لهذه اللغة على هذا الجهاز.',narWait:'جارٍ تحميل الأصوات...',narVoice:'الصوت: {v}',narBlocked:'الصوت محظور ({e}).',setOpen:'شاهد الافتتاحية',setEnd:'شاهد الخاتمة',
 l1short:["تم تأكيد الإقلاع أيها العدّاء صفر. أعداء أمامك. الأسلحة حرة.","ابقَ حياً. المهد كله يعتمد عليك."],
 hyLight:'ضوء سولين {n}%',hyDown:'تم تدمير الهدف',hyClose:'كدت!',hyLast:'أنهِه الآن!',hyPerfect:'مثالي',hyCombo:'كومبو x{n}',hyPU:{shield_cyan:'درع',shield_magenta:'درع الأشواك',shield_gold:'لا يُقهر',shield_green:'درع الإصلاح',multi:'طلقات متعددة',rapid:'إطلاق سريع',speed:'سرعة',heal:'إصلاح'},tactics:["تنغلق صفائحه على الخط الأحمر. تفادَ جانباً ثم اضرب القلب.", "يحفر نحو الأسفل حين يثبت الخط. اترك المسار مبكراً.", "أشرعته تكتسح بعرض الشاشة. ابقَ في الوسط واضرب القلب.", "اللهب يسقط صفوفاً بينها ثغرة. انزلق إلى الممر الأخضر.", "أذرعه النجمية تدور. أطلق النار بين الأذرع.", "يندفع على شكل موجات. اعبر من الوديان لا من القمم.", "يتلاشى ويظهر. راقب الحلقة حيث سيظهر واضربه أولاً.", "أشعة الأبراج تتتبعك. تحرّك دائماً وليس بخط مستقيم.", "يتعلم عاداتك. غيّر مسارك كل بضع ثوانٍ.", "حطامه يضيّق مداره. اكسر الحلقة من الخارج.", "هيكل مدرّع طويل. ادُر حوله واضرب المقاطع المضيئة.", "جدران اللهب تقترب. ابحث عن الثغرة وابقَ هادئاً.", "الشفرات تنتشر. تسلّل بينها ثم عاقبه.", "الصواعق تأتي بإيقاع. عُدّ النبضات وتحرّك بينها.", "بطيء لكنه ضخم. ابقَ تحت مدافعه واضرب القلب.", "خيوطه تسحبك للداخل. تحرّك جانباً ولا تقاوم السحب.", "حلقات متوهجة. استخدم الفجوات المظلمة، فالضوء يحرق.", "ضوؤه يرتعش والهجوم يأتي في العتمة. راقب الارتعاش.", "خلاياه تطلق بالتسلسل. احفظ الترتيب وادُر حوله.", "كل ما تعلمته دفعة واحدة. أنهِ الأمر يا عدّاء."],l1comm:["أيها العدّاء صفر، هل تسمعني؟ هنا مركز سولين.", "النجم يحتضر. لم يبقَ لنا ضوء سوى دقائق، لا سنوات.", "أنت تحمل بذرة الجمر، فهي فرصتنا الأخيرة لإعادة إشعاله.", "استيقظت آلات الجوقة. وكل شيء بينك وبين البوابة يريدك أن تختفي.", "انطلق للأمام. لا تتوقف ولا تلتفت. المهد كله يعتمد عليك."],ph2c:["دروعه تتحطم! واصل الضغط!", "يغيّر نمط هجومه. ابقَ متيقظاً يا عدّاء!", "ضربة موفقة! شيء ما بداخله يتصدّع!"],ph3c:["يرمي بكل ما عنده! ابحث عن الثغرة وتمسّك بها!", "المرحلة الأخيرة! لا تتراجع يا عدّاء!", "كل ما يملكه موجّه إليك الآن. تحرّك!"],laneOff:"الحساسات مثقلة أيها العدّاء. مؤشرات الممرات الآمنة توقفت من هنا. اقرأ الأنماط بنفسك.",ctlName:"مركز سولين",tacName:"تكتيك",contact:"رصد عدو",
 bossNames:['ملزمة الصدأ','مثقاب الحصى','شراع الحديد','تاج الرماد','النجمة الجوفاء','كاسر المدّ','منشور النوفا','حارس البرج','العدسة السوداء','مدار الطاعون','درنوت الكروم','سيّد الجمر','حاصد الزجاج','سندان العاصفة','الحصن الشاحب','نول الفراغ','طاغية الشمس','الفانوس الأسود','ملك السداسيات','المفردة الأخيرة']
@@ -10370,22 +10369,25 @@ const narL2=()=>'en';
 const narVoices=()=>{try{return speechSynthesis.getVoices()||[];}catch(e){return[];}};
 const narNL=v=>String(v.lang||'').toLowerCase().replace('_','-');
 const narForLang=l2=>narVoices().filter(v=>narNL(v).startsWith(l2));
-/* higher = nicer: premium / neural / network voices first, compact ones last */
+/* gender of a device voice, guessed from its name (the speech API does not expose it): 1 male, -1 female, 0 unknown */
+const NAR_M=/\b(male|daniel|arthur|oliver|aaron|gordon|lee|rishi|tom|evan|alex|nathan|bruce|guy|ryan|george|mark|david|james|richard|sean|liam|thomas|brian|christopher|eric|roger|steffan|davis|jason|tony|andrew|brandon|connor|william|mike|paul|matthew|ethan|wayne|ronan|jacob|noah|henry|harry|jack|jake)\b/i;
+const NAR_F=/\b(female|woman|girl|samantha|karen|moira|tessa|fiona|victoria|susan|allison|ava|kate|serena|martha|stephanie|zira|hazel|jenny|aria|sonia|libby|emma|michelle|catherine|linda|heather|nicky|joanna|salli|amy|veena|zoe|maisie|mia|emily|clara|natasha|ana|nora|lily|ella|molly|olivia|sophie|grace|eva|jane|laura|lucy|anna|isla|joan|nancy|kendra|kimberly|ivy|siri female)\b/i;
+const narGender=v=>{const n=v.name+' '+(v.voiceURI||'');return NAR_F.test(n)?-1:NAR_M.test(n)?1:0;};
+/* higher = better: male voices first (female ones last), then premium / neural / network voices, compact ones last */
 function narScore(v,lang){
-  const n=v.name+' '+(v.voiceURI||''),on=typeof navigator==='undefined'||navigator.onLine!==false;let k=0;
+  const n=v.name+' '+(v.voiceURI||''),on=typeof navigator==='undefined'||navigator.onLine!==false,g=narGender(v);let k=0;
+  k+=g>0?12:g<0?-30:0;
   if(/premium|enhanced|neural|natural|wavenet|studio|siri/i.test(n))k+=6;
   if(/online/i.test(n))k+=on?3:-6;
   if(/google/i.test(n))k+=on?2:-4;
   if(v.localService===false&&!on)k-=6;
-  if(/compact|eloquence|novelty|whisper|bad |good |bells|boing|zarvox|trinoids|cellos|albert|fred|junior|kathy|ralph|organ|bubbles|jester|superstar/i.test(n))k-=8;
+  if(/compact|eloquence|novelty|whisper|bad |good |bells|boing|zarvox|trinoids|cellos|albert|fred|junior|kathy|ralph|organ|bubbles|jester|superstar|eddy|flo\b|grandma|grandpa|reed|rocko|sandy|shelley/i.test(n))k-=8;
   if(narNL(v)===lang.toLowerCase())k+=2;
-  if(/daniel|arthur|oliver|tom|evan|alex|male|majed|maged|tarik|hamed|naayf|ahmed|guy|ryan|george/i.test(n)&&!/female/i.test(n))k+=1;
   return k;
 }
 function narVoice(lang){
-  const l2=lang.slice(0,2),all=narForLang(l2);if(!all.length)return null;
-  const want=(save.set.narV||{})[l2],f=want&&all.find(v=>v.name===want);
-  return f||all.slice().sort((a,b)=>narScore(b,lang)-narScore(a,lang))[0];
+  const all=narForLang(lang.slice(0,2));if(!all.length)return null;
+  return all.slice().sort((a,b)=>narScore(b,lang)-narScore(a,lang))[0];
 }
 /* emotion presets: [rate, pitch, volume]. Kept close to 1 on purpose: strong pitch or speed shifts make device voices sound broken.
    NARL = how the LAST sentence of a line lands: [rate x, pitch +, volume x]. Sad / grave / reverent lines settle slower, lower and softer;
@@ -10433,7 +10435,7 @@ function nar(txt,o,force){
   if(o.id&&narClipHas(o.id)&&narClip(o.id))return;
   if(!NAR.ok||!txt)return;
   try{
-    const lang=narLang(),v=narVoice(lang),say=o.say||String(txt),em=NARE[o.em]||NARE.firm,ln=NARL[o.em]||NARL.firm;
+    const lang=narLang(),v=narVoice(lang),say=o.say||String(txt),em=NARE[o.em]||NARE.firm,ln=NARL[o.em]||NARL.firm,gd=v&&narGender(v)>0?0:-.05;
     const pcs=narPieces(say),n=pcs.length,gap=.2,cps=15,rd=o.radio?1.04:1;
     /* fit the whole line to the time the subtitle stays on screen: speed up a little if it would lag (never slow below natural: crawling speech sounds broken) */
     let f=1;
@@ -10444,7 +10446,7 @@ function nar(txt,o,force){
     if(speechSynthesis.paused)speechSynthesis.resume();
     pcs.forEach((p,i)=>{
       const last=i===n-1,w=last?(n>1?1:.6):0;
-      let rate=em[0]*rd*f*(1+(ln[0]-1)*w),pitch=em[1]+(o.radio?.06:0)+ln[1]*w+(!last&&i===0?.02:0),vol=em[2]*(1+(ln[2]-1)*w);
+      let rate=em[0]*rd*f*(1+(ln[0]-1)*w),pitch=em[1]+gd+(o.radio?.06:0)+ln[1]*w+(!last&&i===0?.02:0),vol=em[2]*(1+(ln[2]-1)*w);
       const u=new SpeechSynthesisUtterance(p);u.lang=v?v.lang:lang;if(v)u.voice=v;
       u.rate=clamp(rate,.8,1.25);u.pitch=clamp(pitch,.8,1.2);u.volume=clamp(vol,.4,1);
       u.onstart=()=>{NAR.started++;NAR.err='';narUnl=1;};
@@ -10470,6 +10472,7 @@ function narStatus(){
   if(!narVoices().length)return t('narWait');
   const v=narVoice(narLang());
   if(!v&&isRTL())return t('narNoV');
+  if(v&&narGender(v)<0)return t('narNoMale',{v:v.name});
   return t('narVoice',{v:v?v.name:'default'});
 }
 try{
@@ -11440,10 +11443,6 @@ function renderSettings(){
   $('#t-shake').setAttribute('aria-checked',String(!!save.set.shake));
   $('#t-cine').setAttribute('aria-checked',String(cineOn()));
   $('#t-nar').setAttribute('aria-checked',String(save.set.nar!==false));$('#r-nar').hidden=!NAR.ok||isRTL();$('#r-nar2').hidden=!NAR.ok||isRTL()||save.set.nar===false;$('#narStat').textContent=narStatus();
-  {const sel=$('#s-narv'),l2=narL2(),vs=narForLang(l2).slice().sort((a,b)=>narScore(b,narLang())-narScore(a,narLang())),cur=(save.set.narV||{})[l2]||'';
-   sel.innerHTML='';const o0=document.createElement('option');o0.value='';o0.textContent=t('narAuto');sel.appendChild(o0);
-   vs.forEach(v=>{const o=document.createElement('option');o.value=v.name;o.textContent=v.name+' ('+v.lang+')';sel.appendChild(o);});
-   sel.value=cur;$('#r-nar3').hidden=!NAR.ok||isRTL()||save.set.nar===false||vs.length<1||narClipHas('o0');}
   $('#b-wend').disabled=!save.cleared[100];$('#b-wend').style.opacity=save.cleared[100]?'':'.45';
   document.querySelectorAll('#seg-lang button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===save.set.lang)));
   document.querySelectorAll('#seg-gfx button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.g===(save.set.gfx||'auto'))));
@@ -11560,7 +11559,6 @@ click('#t-vib',()=>{save.set.vib=!save.set.vib;persist();renderSettings();vib(30
 click('#t-shake',()=>{save.set.shake=!save.set.shake;persist();renderSettings();});
 click('#t-cine',()=>{save.set.cine=!cineOn();persist();renderSettings();});
 click('#t-nar',()=>{save.set.nar=save.set.nar===false;persist();renderSettings();if(save.set.nar!==false){audioInit();narUnlock();nar(LNG().cnOpen[6],{em:'firm',id:'o6'});setTimeout(renderSettings,1200);}else narStop();});
-$('#s-narv').addEventListener('change',e=>{save.set.narV=save.set.narV||{};const k=narL2();if(e.target.value)save.set.narV[k]=e.target.value;else delete save.set.narV[k];persist();audioInit();narUnlock();narStop();setTimeout(()=>nar(LNG().cnOpen[7],{em:'intense',id:'o7'},true),160);renderSettings();});
 click('#b-nartest',()=>{audioInit();narUnlock();NAR.err='';const go=()=>{nar(LNG().cnOpen[7],{em:'intense',id:'o7'},true);setTimeout(()=>{if(curScreen==='set')renderSettings();},1300);};try{if(speechSynthesis.speaking||speechSynthesis.pending){narStop();setTimeout(go,160);}else go();}catch(e){go();}renderSettings();});
 click('#b-wopen',()=>{setFrom=curScreen==='set'&&setFrom==='pause'?'main':setFrom;cineStart('open',()=>{toMenu();});});
 click('#b-wend',()=>{if(save.cleared[100])cineStart('end',()=>{toMenu();});});
